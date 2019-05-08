@@ -1,0 +1,72 @@
+2019-5-6 16:14:14[ERROR](HeaderExchangeHandler.java:181)  [DUBBO] Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0x9f5e9d71, /169.254.62.39:12941 => /169.254.62.39:20881]], url: dubbo://169.254.62.39:20881/cn.minture.seller.service.BrandService?anyhost=true&application=manager-web&check=false&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=cn.minture.seller.service.BrandService&methods=findAll&pid=7744&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1557130451601, dubbo version: 2.8.4, current host: 169.254.62.39
+java.lang.Exception: Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0x9f5e9d71, /169.254.62.39:12941 => /169.254.62.39:20881]], url: dubbo://169.254.62.39:20881/cn.minture.seller.service.BrandService?anyhost=true&application=manager-web&check=false&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=cn.minture.seller.service.BrandService&methods=findAll&pid=7744&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1557130451601
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:180)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-5-6 16:14:14[ERROR](HeaderExchangeHandler.java:181)  [DUBBO] Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0x9f5e9d71, /169.254.62.39:12941 => /169.254.62.39:20881]], url: dubbo://169.254.62.39:20881/cn.minture.seller.service.BrandService?anyhost=true&application=manager-web&check=false&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=cn.minture.seller.service.BrandService&methods=findAll&pid=7744&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1557130451601, dubbo version: 2.8.4, current host: 169.254.62.39
+java.lang.Exception: Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0x9f5e9d71, /169.254.62.39:12941 => /169.254.62.39:20881]], url: dubbo://169.254.62.39:20881/cn.minture.seller.service.BrandService?anyhost=true&application=manager-web&check=false&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=cn.minture.seller.service.BrandService&methods=findAll&pid=7744&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1557130451601
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:180)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-5-6 16:14:14[ERROR](HeaderExchangeHandler.java:181)  [DUBBO] Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0x9f5e9d71, /169.254.62.39:12941 => /169.254.62.39:20881]], url: dubbo://169.254.62.39:20881/cn.minture.seller.service.BrandService?anyhost=true&application=manager-web&check=false&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=cn.minture.seller.service.BrandService&methods=findAll&pid=7744&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1557130451601, dubbo version: 2.8.4, current host: 169.254.62.39
+java.lang.Exception: Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0x9f5e9d71, /169.254.62.39:12941 => /169.254.62.39:20881]], url: dubbo://169.254.62.39:20881/cn.minture.seller.service.BrandService?anyhost=true&application=manager-web&check=false&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=cn.minture.seller.service.BrandService&methods=findAll&pid=7744&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1557130451601
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:180)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-5-6 16:17:10[ERROR](HeaderExchangeHandler.java:181)  [DUBBO] Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0x395d233d, /169.254.62.39:12980 => /169.254.62.39:20881]], url: dubbo://169.254.62.39:20881/cn.minture.seller.service.BrandService?anyhost=true&application=manager-web&check=false&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=cn.minture.seller.service.BrandService&methods=findAll&pid=3864&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1557130627965, dubbo version: 2.8.4, current host: 169.254.62.39
+java.lang.Exception: Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0x395d233d, /169.254.62.39:12980 => /169.254.62.39:20881]], url: dubbo://169.254.62.39:20881/cn.minture.seller.service.BrandService?anyhost=true&application=manager-web&check=false&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=cn.minture.seller.service.BrandService&methods=findAll&pid=3864&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1557130627965
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:180)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-5-6 16:17:11[ERROR](HeaderExchangeHandler.java:181)  [DUBBO] Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0x395d233d, /169.254.62.39:12980 => /169.254.62.39:20881]], url: dubbo://169.254.62.39:20881/cn.minture.seller.service.BrandService?anyhost=true&application=manager-web&check=false&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=cn.minture.seller.service.BrandService&methods=findAll&pid=3864&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1557130627965, dubbo version: 2.8.4, current host: 169.254.62.39
+java.lang.Exception: Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0x395d233d, /169.254.62.39:12980 => /169.254.62.39:20881]], url: dubbo://169.254.62.39:20881/cn.minture.seller.service.BrandService?anyhost=true&application=manager-web&check=false&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=cn.minture.seller.service.BrandService&methods=findAll&pid=3864&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1557130627965
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:180)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-5-6 16:17:11[ERROR](HeaderExchangeHandler.java:181)  [DUBBO] Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0x395d233d, /169.254.62.39:12980 => /169.254.62.39:20881]], url: dubbo://169.254.62.39:20881/cn.minture.seller.service.BrandService?anyhost=true&application=manager-web&check=false&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=cn.minture.seller.service.BrandService&methods=findAll&pid=3864&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1557130627965, dubbo version: 2.8.4, current host: 169.254.62.39
+java.lang.Exception: Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0x395d233d, /169.254.62.39:12980 => /169.254.62.39:20881]], url: dubbo://169.254.62.39:20881/cn.minture.seller.service.BrandService?anyhost=true&application=manager-web&check=false&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=cn.minture.seller.service.BrandService&methods=findAll&pid=3864&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1557130627965
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:180)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-5-6 16:19:04[ERROR](HeaderExchangeHandler.java:181)  [DUBBO] Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0x2d091ba2, /169.254.62.39:13198 => /169.254.62.39:20881]], url: dubbo://169.254.62.39:20881/cn.minture.seller.service.BrandService?anyhost=true&application=manager-web&check=false&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=cn.minture.seller.service.BrandService&methods=findAll&pid=7896&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1557130742404, dubbo version: 2.8.4, current host: 169.254.62.39
+java.lang.Exception: Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0x2d091ba2, /169.254.62.39:13198 => /169.254.62.39:20881]], url: dubbo://169.254.62.39:20881/cn.minture.seller.service.BrandService?anyhost=true&application=manager-web&check=false&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=cn.minture.seller.service.BrandService&methods=findAll&pid=7896&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1557130742404
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:180)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-5-6 16:19:04[ERROR](HeaderExchangeHandler.java:181)  [DUBBO] Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0x2d091ba2, /169.254.62.39:13198 => /169.254.62.39:20881]], url: dubbo://169.254.62.39:20881/cn.minture.seller.service.BrandService?anyhost=true&application=manager-web&check=false&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=cn.minture.seller.service.BrandService&methods=findAll&pid=7896&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1557130742404, dubbo version: 2.8.4, current host: 169.254.62.39
+java.lang.Exception: Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0x2d091ba2, /169.254.62.39:13198 => /169.254.62.39:20881]], url: dubbo://169.254.62.39:20881/cn.minture.seller.service.BrandService?anyhost=true&application=manager-web&check=false&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=cn.minture.seller.service.BrandService&methods=findAll&pid=7896&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1557130742404
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:180)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-5-6 16:19:04[ERROR](HeaderExchangeHandler.java:181)  [DUBBO] Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0x2d091ba2, /169.254.62.39:13198 => /169.254.62.39:20881]], url: dubbo://169.254.62.39:20881/cn.minture.seller.service.BrandService?anyhost=true&application=manager-web&check=false&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=cn.minture.seller.service.BrandService&methods=findAll&pid=7896&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1557130742404, dubbo version: 2.8.4, current host: 169.254.62.39
+java.lang.Exception: Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0x2d091ba2, /169.254.62.39:13198 => /169.254.62.39:20881]], url: dubbo://169.254.62.39:20881/cn.minture.seller.service.BrandService?anyhost=true&application=manager-web&check=false&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=cn.minture.seller.service.BrandService&methods=findAll&pid=7896&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1557130742404
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:180)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
