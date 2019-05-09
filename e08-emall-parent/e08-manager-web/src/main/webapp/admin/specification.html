@@ -13,10 +13,79 @@
     <link rel="stylesheet" href="../css/style.css">
 	<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
     <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../plugins/angularjs/angular.min.js"></script>
+    <script src="../plugins/angularjs/pagination.js"></script>
+<link rel="stylesheet" href="../plugins/angularjs/pagination.css">
+    <script type="text/javascript">
+    var app = angular.module('specification',['pagination']);
+    app.controller('specifyController',function($scope,$http){
+    	$scope.paginationConf = {
+    			currentPage : 1, //设置当前页号
+    			totalItems : 5, //设置每页的总记录数
+    			itemsPerPage : 10, //设置页面行数
+    			perPageOptions : [ 5, 10, 15, 20 ], //设置页面总记录数可选项
+    			onChange : function() {
+    				$scope.reloadList(); //当分页栏发生改变时调用reloadList()方法重新加载页面
+    			}
+    };
+    	$scope.reloadList = function()
+    	{
+    	$scope.findPage($scope.paginationConf.currentPage,
+    	$scope.paginationConf.itemsPerPage);
+    	}
+    	$scope.searchEntity ={};
+    	$scope.findPage = function(page,size)
+    	{
+    		$http.post('../specify/findByPager?pageNo='+page+'&pageSize='+size,$scope.searchEntity).success(function(response){
+    			$scope.list  = response.data.rows;
+    			$scope.paginationConf.totalItems = response.data.total;
+    			
+    			
+    		});
+    	}
+    	
+    	$scope.findById= function(id)
+    	{
+    		$http.get('../specify/findById?id='+id).success(
+    		function(response)
+    		{
+    			$scope.entity= response;
+    		}
+    		)};
+    $scope.selectIds= [];
+    $scope.updateSelection = function($event,id){
+    	if($event.target.checked)
+    		{
+    		$scope.selectIds.push(id);
+    		}else
+    			{
+    			var index = $scope.selectedIds.indexof(id);
+    			$scope.selectIds.splice(index,1);
+    			}
+    }
+    	
+    	$scope.dele= function()
+    	{
+    		if(confirm('确定要删除吗?')){
+    			$http.get('../specify/delete?ids='+$scope.selectIds).success(
+    					function(response){
+    						if(response.status==200)
+    						{
+    							$scope.reloadList();
+    						}else
+    							{
+    							alert(response.msg);
+    							}
+    					});
+    		}
+    		
+    	}
+    });
+    </script>
     
 </head>
 
-<body class="hold-transition skin-red sidebar-mini" >
+<body class="hold-transition skin-red sidebar-mini" ng-app="specification" ng-controller="specifyController">
   <!-- .box-body -->                
                     <div class="box-header with-border">
                         <h3 class="box-title">规格管理</h3>
@@ -29,8 +98,8 @@
                             <div class="pull-left">
                                 <div class="form-group form-inline">
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-default" title="新建" data-toggle="modal" data-target="#editModal" ><i class="fa fa-file-o"></i> 新建</button>
-                                        <button type="button" class="btn btn-default" title="删除" ><i class="fa fa-trash-o"></i> 删除</button>
+                                        <button type="button" class="btn btn-default" title="新建" data-toggle="modal" data-target="#editModal" ng-click="entity={}"><i class="fa fa-file-o"></i> 新建</button>
+                                        <button type="button" class="btn btn-default" title="删除" ng-click="dele()" ><i class="fa fa-trash-o"></i> 删除</button>
                                         
                                         <button type="button" class="btn btn-default" title="刷新" onclick="window.location.reload();"><i class="fa fa-refresh"></i> 刷新</button>
                                     </div>
@@ -38,8 +107,8 @@
                             </div>
                             <div class="box-tools pull-right">
                                 <div class="has-feedback">
-							                    规格名称：<input  >									
-									<button class="btn btn-default" >查询</button>                                    
+							                    规格名称：<input  ng-model="searchEntity.specName">									
+									<button class="btn btn-default" ng-click="reloadList()">查询</button>                                    
                                 </div>
                             </div>
                             <!--工具栏/-->
@@ -56,25 +125,19 @@
 			                          </tr>
 			                      </thead>
 			                      <tbody>
-			                          <tr >
-			                              <td><input  type="checkbox" ></td>			                              
-				                          <td>1</td>
-									      <td>网络制式</td>
+			                          <tr ng-repeat="entity in list">
+			                              <td><input  type="checkbox" ng-click="updateSelection($event,entity.id)"></td>			                              
+				                          <td>{{entity.id}}</td>
+									      <td>{{entity.specName}}</td>
 		                                  <td class="text-center">                                           
-		                                 	  <button type="button" class="btn bg-olive btn-xs" data-toggle="modal" data-target="#editModal">修改</button>                                           
+		                                 	  <button type="button" class="btn bg-olive btn-xs" data-toggle="modal" data-target="#editModal" ng-click="findById(entity.id)">修改</button>                                           
 		                                  </td>
 			                          </tr>
-									  <tr >
-			                              <td><input  type="checkbox" ></td>			                              
-				                          <td>2</td>
-									      <td>服装尺码</td>
-		                                  <td class="text-center">                                           
-		                                 	  <button type="button" class="btn bg-olive btn-xs" data-toggle="modal" data-target="#editModal">修改</button>                                           
-		                                  </td>
-			                          </tr>
+									  
 			                      </tbody>
 			                  </table>
-			                  <!--数据列表/-->    
+			                  <!--数据列表/-->   
+			                  <tm-pagination conf="paginationConf"></tm-pagination> 
                         </div>
                         <!-- 数据表格 /--> 
                      </div>
@@ -94,7 +157,7 @@
 			<table class="table table-bordered table-striped"  width="800px">
 		      	<tr>
 		      		<td>规格名称</td>
-		      		<td><input  class="form-control" placeholder="规格名称" >  </td>
+		      		<td><input  class="form-control" placeholder="规格名称"  ng-model="entity.name">  </td>
 		      	</tr>
 			 </table>				
 			 
@@ -156,7 +219,7 @@
 			
 		</div>
 		<div class="modal-footer">						
-			<button class="btn btn-success" data-dismiss="modal" aria-hidden="true">保存</button>
+			<button class="btn btn-success" data-dismiss="modal" aria-hidden="true" ng-click="save()">保存</button>
 			<button class="btn btn-default" data-dismiss="modal" aria-hidden="true">关闭</button>
 		</div>
 	  </div>

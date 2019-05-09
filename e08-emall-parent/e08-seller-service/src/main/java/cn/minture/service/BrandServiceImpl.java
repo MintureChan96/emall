@@ -74,7 +74,7 @@ public class BrandServiceImpl implements BrandService{
 	 */
 	@Override
 	public void update(TbBrand tbBrand) {
-		tbBrandMapper.updateByExample(tbBrand, null);
+		tbBrandMapper.updateByPrimaryKey(tbBrand);
 		
 	}
 	/**

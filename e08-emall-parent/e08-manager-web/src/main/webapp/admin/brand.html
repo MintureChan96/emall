@@ -19,98 +19,12 @@
 
 <!-- 分页组件开始 -->
 <script src="../plugins/angularjs/pagination.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/base_pagination.js"></script>
+<script src="../js/service/brandService.js"></script>
+<script src="../js/controller/BaseController.js"></script>
+<script src="../js/controller/brandController.js"></script>
 <link rel="stylesheet" href="../plugins/angularjs/pagination.css">
-<!-- 分页组件结束 -->
-<script type="text/javascript">
-	var app = angular.module('emall', [ 'pagination' ]);
-	app.controller('brandController', function($scope, $http) {
-		//paninationConf用来画页面的分页栏
-		$scope.paginationConf = {
-			currentPage : 1, //设置当前页号
-			totalItems : 5, //设置每页的总记录数
-			itemsPerPage : 10, //设置页面行数
-			perPageOptions : [ 5, 10, 15, 20 ], //设置页面总记录数可选项
-			onChange : function() {
-				$scope.reloadList(); //当分页栏发生改变时调用reloadList()方法重新加载页面
-			}
-
-		};
-		$scope.reloadList = function() {
-			$scope.findPage($scope.paginationConf.currentPage,
-					$scope.paginationConf.itemsPerPage); //传入页面大小和当前页号 传给findPage函数
-		}
-		$scope.searchEntity = {}; //设置查询条件为空
-
-		$scope.findPage = function(page, size) { //post请求发送到控制器传入参数.如果serchEntity为空则为无条件分页查询
-			$http.post('../brand/findByPager?page=' + page + '&size=' + size,
-					$scope.searchEntity).success(function(response) {
-				//成功后从新给scope的list赋值值为TbBrand对象数组
-				$scope.list = response.data.rows;
-				//设置总记录数
-				$scope.paginationConf.totalItems = response.data.total;
-			});
-		}
-
-		//添加方法
-		$scope.save = function() {
-			var methodName = 'add';
-			//判断 scope中tbBrand的id是否为空如果为空则添加 否则该方法将是修改，因为修改和添加共用一个页面
-			if ($scope.entity.id != null) {
-				methodName = 'update';
-
-			}
-			$http.post('../brand/' + methodName, $scope.entity).success(
-					function(response) {
-						//成功刷新页面,失败弹出对话框。
-						if (response) {
-							$scope.reloadList();
-						} else {
-							alert(response.msg);
-						}
-					});
-		}
-		//根据id查询tbBrand
-		$scope.findById = function(id) {
-			$http.get('../brand/finById?id=' + id).success(
-			//成功返回对象tbBrand
-			function(response) {
-				$scop.entity = response;
-			});
-		}
-		//创建空的品牌id集合
-		$scope.selectIds = [];
-		$scope.updateSelection = function($event, id) {
-			/* 传入事件与参数 
-			每次checkebox选中都会触发该函数
-			 */
-			if ($event.target.checked) {
-				//向空集合中加入选中的id
-				$scope.selectIds.push(id);
-			} else {
-				//设置选中的集合中的索引
-				var index = $scope.selectedIds.indexof(id);
-				//删除没有选中的id
-				$scope.selectIds.splice(index, 1);
-			}
-		}
-
-		//删除事件
-		$scope.dele = function() {
-			if (confirm('确定要删除吗？')) {
-				$http.get('../brand/delete?ids=' + $scope.selectIds).success(
-						function(response) {
-							if (response.status == 200) {
-								$scope.reloadList();
-							} else {
-								alert(response.msg);
-							}
-						});
-			}
-		}
-	});
-</script>
-
-
 
 </head>
 <body class="hold-transition skin-red sidebar-mini" ng-app="emall"
