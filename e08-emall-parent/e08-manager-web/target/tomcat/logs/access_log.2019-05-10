@@ -1,0 +1,14 @@
+0:0:0:0:0:0:0:1 - - [10/May/2019:15:17:40 +0800] "GET /admin/index.html HTTP/1.1" 304 - http-bio-9101-exec-1 65
+0:0:0:0:0:0:0:1 - - [10/May/2019:15:17:40 +0800] "GET /plugins/jQueryUI/jquery-ui.min.js HTTP/1.1" 404 949 http-bio-9101-exec-3 21
+0:0:0:0:0:0:0:1 - - [10/May/2019:15:17:40 +0800] "GET /plugins/jQueryUI/jquery-ui.min.js HTTP/1.1" 404 949 http-bio-9101-exec-4 5
+0:0:0:0:0:0:0:1 - - [10/May/2019:15:17:44 +0800] "POST /specify/findByPager?pageNo=1&pageSize=10 HTTP/1.1" 200 289 http-bio-9101-exec-6 1688
+0:0:0:0:0:0:0:1 - - [10/May/2019:15:17:44 +0800] "POST /specify/findByPager?pageNo=1&pageSize=10 HTTP/1.1" 200 289 http-bio-9101-exec-7 69
+0:0:0:0:0:0:0:1 - - [10/May/2019:15:17:46 +0800] "GET /specify/findById?id=39 HTTP/1.1" 200 122 http-bio-9101-exec-9 116
+0:0:0:0:0:0:0:1 - - [10/May/2019:15:17:48 +0800] "POST /specify/update HTTP/1.1" 200 48 http-bio-9101-exec-10 100
+0:0:0:0:0:0:0:1 - - [10/May/2019:15:17:48 +0800] "POST /specify/findByPager?pageNo=1&pageSize=10 HTTP/1.1" 200 289 http-bio-9101-exec-10 58
+0:0:0:0:0:0:0:1 - - [10/May/2019:15:17:58 +0800] "GET /specify/delete?ids=39 HTTP/1.1" 200 48 http-bio-9101-exec-4 44
+0:0:0:0:0:0:0:1 - - [10/May/2019:15:17:58 +0800] "POST /specify/findByPager?pageNo=1&pageSize=10 HTTP/1.1" 200 260 http-bio-9101-exec-4 72
+0:0:0:0:0:0:0:1 - - [10/May/2019:15:17:58 +0800] "POST /specify/findByPager?pageNo=1&pageSize=10 HTTP/1.1" 200 260 http-bio-9101-exec-4 28
+0:0:0:0:0:0:0:1 - - [10/May/2019:15:18:01 +0800] "GET /specify/delete?ids=39,34 HTTP/1.1" 200 48 http-bio-9101-exec-4 38
+0:0:0:0:0:0:0:1 - - [10/May/2019:15:18:01 +0800] "POST /specify/findByPager?pageNo=1&pageSize=10 HTTP/1.1" 200 233 http-bio-9101-exec-4 47
+0:0:0:0:0:0:0:1 - - [10/May/2019:15:18:01 +0800] "POST /specify/findByPager?pageNo=1&pageSize=10 HTTP/1.1" 200 233 http-bio-9101-exec-4 35

@@ -1,1 +1,1 @@
-var app = angular.module('emal',[]);
+var app = angular.module('emall',[]);

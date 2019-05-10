@@ -4,6 +4,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.alibaba.dubbo.config.annotation.Reference;
+
+import cn.minture.emall.entity.Specification;
 import cn.minture.emall.entity.TbSpecification;
 import cn.minture.result.ShopResult;
 import cn.minture.seller.service.SpecificationService;
@@ -13,7 +15,7 @@ import cn.minture.seller.service.SpecificationService;
 public class SpecificationController {
 
 	@Reference
-	private SpecificationService specificationService;	
+	private SpecificationService specificationService;
 	
     @RequestMapping("/findByPager")	
      public ShopResult queryByPager(@RequestBody TbSpecification specification,int pageNo,int pageSize)
@@ -23,13 +25,12 @@ public class SpecificationController {
      }
     
     @RequestMapping("/findById")
-    public TbSpecification queryById(Long id) {
-
+    public Specification queryById(Long id) {
     	return specificationService.findById(id);
 	}
     
     @RequestMapping("/add")
-    public ShopResult add(@RequestBody TbSpecification specification)
+    public ShopResult add(@RequestBody Specification specification)
     {
     	try {
     		specificationService.add(specification);
@@ -53,7 +54,7 @@ public class SpecificationController {
     }
     
     @RequestMapping("/update")
-    public ShopResult update(@RequestBody TbSpecification specification)
+    public ShopResult update(@RequestBody Specification specification)
     {
     	try {
     		specificationService.update(specification);

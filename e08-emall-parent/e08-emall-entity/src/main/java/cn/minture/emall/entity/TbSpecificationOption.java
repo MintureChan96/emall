@@ -1,6 +1,8 @@
 package cn.minture.emall.entity;
 
-public class TbSpecificationOption {
+import java.io.Serializable;
+
+public class TbSpecificationOption implements Serializable{
     private Long id;
 
     private String optionName;
